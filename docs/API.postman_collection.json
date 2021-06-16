@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "f24843e0-6f57-415e-bc0a-ae45183bd0eb",
+		"name": "deneme",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Assistant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Ali\",\n        \"lastName\": \"Yildirim\"\n ,\n        \"email\": \"ali@gmail.com\"\n ,\n        \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/assistants",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Assistants List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Ali\",\n        \"lastName\": \"Yildirim\"\n ,\n        \"email\": \"ali@gmail.com\"\n ,\n        \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/assistants",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assistants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get persons List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Salih\",\n     \"lastName\": \"Yalcin\"\n,\n    \"email\": \"ss@gmail.com\"\n ,\n  \"password\": \"123ww45\"\n,\n \"amount_of_work\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create persons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Salih\",\n     \"lastName\": \"Yalcin\"\n,\n    \"email\": \"ss@gmail.com\"\n ,\n  \"password\": \"123ww45\"\n,\n \"amount_of_work\": \"12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/persons",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Admin List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Ali osman\",\n        \"lastName\": \"Yildirim\"\n ,\n        \"email\": \"ali@gmail.com\"\n ,\n        \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"Ali osman\",\n        \"lastName\": \"Yildirim\"\n ,\n        \"email\": \"ali@gmail.com\"\n ,\n        \"password\": \"12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tasks List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"place_name\": \"Salon\"\n,\n        \"time\": \"2021-06-11T22:46:12.000Z\"\n,\n   \"explanation\": \"Masalar Silinecek...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create tasks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"place_name\": \"Salon\"\n,\n        \"time\": \"12:30\"\n,\n   \"explanation\": \"Masalar Silinecek...\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tasks",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
