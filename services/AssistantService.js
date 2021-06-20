@@ -18,6 +18,6 @@ export async function getAssistantById(pId) {
 }
 
 export async function updateAssistant(pId, pUpdateAssistant) {
-    let assistant = await assistantRepository.updateAssistant(pId, pUpdateAssistant);
+    let assistant = await assistantRepository.update(pId, pUpdateAssistant);
     return assistant;
 }

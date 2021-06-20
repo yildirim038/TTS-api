@@ -33,7 +33,7 @@ db.persons.hasMany(db.excuse);
 db.persons.hasMany(db.tasks);
 
 // .sync({ force: true })
-db.sequelize.sync({ force: true }).then(() => {
+db.sequelize.sync().then(() => {
   console.log("Basari ile olusturuldu...");
 });
 

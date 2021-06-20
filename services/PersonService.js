@@ -18,6 +18,6 @@ export async function getPersonById(pId) {
 }
 
 export async function updatePerson(pId, pUpdatePerson) {
-    let person = await personRepository.updatePerson(pId, pUpdatePerson);
+    let person = await personRepository.update(pId, pUpdatePerson);
     return person;
 }
