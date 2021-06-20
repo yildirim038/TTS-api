@@ -18,6 +18,6 @@ export async function getTasksById(pId) {
 }
 
 export async function updateTasks(pId, pUpdateTasks) {
-    let tasks = await tasksRepository.updateTasks(pId, pUpdateTasks);
+    let tasks = await tasksRepository.update(pId, pUpdateTasks);
     return tasks;
 }

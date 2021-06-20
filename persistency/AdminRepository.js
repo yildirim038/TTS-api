@@ -17,7 +17,7 @@ export async function remove(pId) {
     where: { id: pId }
   })
 }
-/**ali osman deneme */
+
 export async function update(pId, pAdmin) {
   return await db.admin.update(pAdmin, {
     where: { id: pId }

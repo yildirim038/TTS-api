@@ -18,6 +18,6 @@ export async function getExcuseById(pId) {
 }
 
 export async function updateExcuse(pId, pUpdateExcuse) {
-    let excuse = await excuseRepository.updateExcuse(pId, pUpdateExcuse);
+    let excuse = await excuseRepository.update(pId, pUpdateExcuse);
     return excuse;
 }

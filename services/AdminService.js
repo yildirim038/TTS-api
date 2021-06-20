@@ -18,6 +18,6 @@ export async function getAdminById(pId) {
 }
 
 export async function updateAdmin(pId, pUpdateAdmin) {
-    let admin = await adminRepository.updateAdmin(pId, pUpdateAdmin);
+    let admin = await adminRepository.update(pId, pUpdateAdmin);
     return admin;
 }
