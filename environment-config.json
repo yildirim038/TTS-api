@@ -1,8 +1,8 @@
 {
-  "HOST": "127.0.0.1",
-  "USER": "root",
-  "PASSWORD": "202lsn202",
-  "DB": "projetts",
+  "HOST": "164.90.168.84",
+  "USER": "yilim",
+  "PASSWORD": "yil-im01!",
+  "DB": "tts_db",
   "dialect": "mysql",
   "pool": {
     "max": 5,
