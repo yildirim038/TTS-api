@@ -59,7 +59,7 @@ const doc = {
         Task: {
             "id": 34445,
             "place_name": "Salon",
-            "time": "12:30" ,
+            "date": "12:30" ,
             "explanation": "Yerler Temiylenip camlar silinecek...",
         },
     }
@@ -69,5 +69,5 @@ const outputFile = './swagger.json'
 const endpointsFiles = ['./app.js']
 
 swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
-    require('./app')           // Your project's root file
+    ('./app')           // Your project's root file
 })
