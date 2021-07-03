@@ -1,5 +1,5 @@
 export default (sequelize, Sequelize) => {
-  const Assistant = sequelize.define("proje-asistan", {
+  const Assistant = sequelize.define("asistan", {
     firstName: {
       type: Sequelize.STRING
     },
