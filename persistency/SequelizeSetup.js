@@ -5,6 +5,7 @@ import AsistantModel from "./models/Assistant.js"
 import ExcuseListModel from "./models/Excuse.js"
 import TasksModel from "./models/Task.js"
 import AdminModel from "./models/Admin.js"
+import CreatTaskListModel from "./models/CreatTaskList.js"
 
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
   host: dbConfig.HOST,
@@ -27,10 +28,12 @@ db.assistants = AsistantModel(sequelize, Sequelize);
 db.excuse = ExcuseListModel(sequelize, Sequelize);
 db.tasks = TasksModel(sequelize, Sequelize);
 db.admin = AdminModel(sequelize, Sequelize);
+db.creatTaskList = CreatTaskListModel(sequelize, Sequelize);
 
 // create relationship
-db.persons.hasMany(db.excuse);
-db.persons.hasMany(db.tasks);
+db.assistants.hasMany(db.creatTaskList);
+db.tasks.hasMany(db.creatTaskList);
+db.persons.hasMany(db.creatTaskList);
 
 // .sync({ force: true })
 db.sequelize.sync().then(() => {
