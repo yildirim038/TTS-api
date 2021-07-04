@@ -16,6 +16,7 @@ import assistantsRouter from './routers/AssistantRoute.js';
 import adminsRouter from './routers/AdminRoute.js';
 import excuseRouter from './routers/ExcuseRoute.js';
 import tasksRouter from './routers/TaskRoute.js';
+import creatTaskListRouter from './routers/CreatTaskListRoute.js';
 
 let app = express();
 
@@ -30,7 +31,7 @@ app.use('/assistants', assistantsRouter);
 app.use('/admins', adminsRouter);
 app.use('/excuse', excuseRouter);
 app.use('/tasks', tasksRouter);
-
+app.use('/creatTaskList', creatTaskListRouter);
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
