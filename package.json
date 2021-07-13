@@ -4,8 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "node run  --experimental-json-modules app.js",
-    "start-dev": "npm run doc-gen & nodemon --experimental-json-modules app.js",
+    "start": "node --experimental-json-modules app.js",
     "doc-gen": "node swagger.js"
   },
   "dependencies": {
