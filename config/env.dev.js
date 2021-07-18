@@ -31,6 +31,6 @@ if (!clientOriginUrl) {
     );
 }
 
-const clientOrigins = ["http://localhost:5050"];
+const clientOrigins = ["http://localhost:3000"];
 
-export { audience, domain, serverPort, clientOriginUrl };
+export { audience, domain, serverPort, clientOriginUrl, clientOrigins };

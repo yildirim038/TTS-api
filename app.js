@@ -6,10 +6,10 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import cors from 'cors';
-import checkJwt from './auth/check-jwt.js'
+import { clientOrigins, serverPort } from "./config/env.dev.js";
 import swaggerUi from 'swagger-ui-express';
 import swaggerDocument from './swagger.json';
-
+import helmet from "helmet";
 
 // Routers
 import personsRouter from './routers/PersonRoute.js';
@@ -22,11 +22,12 @@ import creatTaskListRouter from './routers/CreatTaskListRoute.js';
 
 let app = express();
 
+app.use(helmet());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({ origin: clientOrigins }));
 app.use('/persons', personsRouter);
 app.use('/assistants', assistantsRouter);
 app.use('/admins', adminsRouter);
@@ -34,11 +35,11 @@ app.use('/excuse', excuseRouter);
 app.use('/tasks', tasksRouter);
 app.use('/creatTaskList', creatTaskListRouter);
 app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use(jwtCheck);
 
-app.listen(3000, () => {
-    console.log("listening on 3000");
-});
+
+app.listen(serverPort, () =>
+    console.log(`API Server listening on port ${serverPort}`)
+);
 
 
 // to be deleted
