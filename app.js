@@ -27,7 +27,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(cors({ origin: clientOrigins }));
+app.use(cors());
 app.use('/persons', personsRouter);
 app.use('/assistants', assistantsRouter);
 app.use('/admins', adminsRouter);
